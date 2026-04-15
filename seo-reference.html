@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO Reference &amp; Internal Linking Map | Grokipedia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .ref-table { width:100%; border-collapse:collapse; font-size:14px; }
+    .ref-table th { font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; background:var(--ink); color:white; padding:10px 14px; text-align:left; }
+    .ref-table td { padding:12px 14px; border-bottom:1px solid var(--border); vertical-align:top; line-height:1.55; }
+    .ref-table tr:nth-child(even) td { background:var(--warm-white); }
+    .ref-table td:first-child { font-family:var(--mono); font-size:12px; color:var(--accent); white-space:nowrap; }
+    .linking-item { padding:20px; border:1px solid var(--border-dark); margin-bottom:12px; }
+    .linking-item h4 { font-family:var(--display); font-size:16px; font-weight:700; margin-bottom:10px; }
+    .linking-item ul { padding-left:20px; font-size:14px; color:var(--slate); }
+    .linking-item li { margin-bottom:5px; }
+    .schema-block { background:var(--ink); color:#a8e6a3; font-family:var(--mono); font-size:13px; padding:24px; border-radius:2px; overflow-x:auto; margin-bottom:24px; line-height:1.7; }
+  </style>
+</head>
+<body>
+  <div class="topbar"><a href="index.html">← Back to Grokipedia Home</a></div>
+  <header><div class="header-inner">
+    <a href="index.html" class="logo">Grok<span class="accent">expedia</span><span class="logo-badge">Beta</span></a>
+    <nav><ul><li><a href="index.html">Home</a></li><li><a href="articles.html">Articles</a></li><li><a href="categories.html">Categories</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="nav-cta">Contact</a></li></ul></nav>
+  </div></header>
+
+  <div class="prose-header">
+    <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
+      <h1>SEO Reference, Internal Linking Map &amp; Schema</h1>
+      <p>Complete technical reference for all pages — SEO metadata, internal link structure, and JSON-LD schema markup.</p>
+    </div>
+  </div>
+
+  <div style="max-width:1100px;margin:0 auto;padding:56px 24px;">
+
+    <!-- ── SECTION 1: SEO METADATA ── -->
+    <p class="section-label">Section 1</p>
+    <h2 class="section-title" style="margin-bottom:32px;">SEO Metadata — All Pages</h2>
+
+    <div style="overflow-x:auto;">
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>Page / File</th>
+          <th>SEO Title Tag</th>
+          <th>Meta Description</th>
+          <th>Primary Keyword</th>
+          <th>Secondary Keywords</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>index.html</td>
+          <td>Grokipedia – The AI-Powered Knowledge Encyclopedia | grokexpedia.us</td>
+          <td>Grokipedia is a modern AI-powered encyclopedia built for real people. Explore in-depth articles on artificial intelligence, technology, and the future.</td>
+          <td>Grokipedia</td>
+          <td>xAI encyclopedia, AI knowledge base, artificial intelligence explained</td>
+        </tr>
+        <tr>
+          <td>about.html</td>
+          <td>About Us — Our Mission, Editorial Process &amp; Standards | Grokipedia</td>
+          <td>Learn about Grokipedia's editorial mission, our team, how we create content, and the standards we hold ourselves to as an AI knowledge platform.</td>
+          <td>Grokipedia editorial standards</td>
+          <td>AI encyclopedia mission, E-E-A-T, human-edited AI content</td>
+        </tr>
+        <tr>
+          <td>contact.html</td>
+          <td>Contact Us | Grokipedia</td>
+          <td>Get in touch with the Grokipedia editorial team — for corrections, questions, feedback, or editorial inquiries.</td>
+          <td>Grokipedia contact</td>
+          <td>editorial contact, AI platform corrections</td>
+        </tr>
+        <tr>
+          <td>privacy.html</td>
+          <td>Privacy Policy | Grokipedia</td>
+          <td>Grokipedia's Privacy Policy — how we collect, use, and protect your data. AdSense-compliant and written in plain language.</td>
+          <td>Grokipedia privacy policy</td>
+          <td>data collection, cookies, AdSense compliance</td>
+        </tr>
+        <tr>
+          <td>disclaimer.html</td>
+          <td>Disclaimer | Grokipedia</td>
+          <td>Grokipedia's content disclaimer — accuracy, liability limitations, and how to use our content responsibly.</td>
+          <td>Grokipedia disclaimer</td>
+          <td>content accuracy, AI content liability</td>
+        </tr>
+        <tr>
+          <td>terms.html</td>
+          <td>Terms &amp; Conditions | Grokipedia</td>
+          <td>Grokipedia's Terms and Conditions — the rules governing use of grokexpedia.us.</td>
+          <td>Grokipedia terms</td>
+          <td>website terms of use, content license</td>
+        </tr>
+        <tr>
+          <td>articles.html</td>
+          <td>All Articles | Grokipedia</td>
+          <td>Browse all Grokipedia articles on artificial intelligence, technology, ethics, and the future of AI-powered knowledge.</td>
+          <td>Grokipedia articles</td>
+          <td>AI articles, technology knowledge, AI encyclopedia articles</td>
+        </tr>
+        <tr>
+          <td>categories.html</td>
+          <td>Browse by Category | Grokipedia</td>
+          <td>Browse Grokipedia articles by topic category — Artificial Intelligence, Technology, Guides, Digital Trends, and Ethics.</td>
+          <td>Grokipedia categories</td>
+          <td>AI topics, technology categories, knowledge topics</td>
+        </tr>
+        <tr>
+          <td>articles/what-is-grokipedia.html</td>
+          <td>What is Grokipedia and How It Works | Grokipedia</td>
+          <td>A complete, honest explanation of what Grokipedia is, how it works, its connection to xAI, and why it represents a new approach to online knowledge.</td>
+          <td>what is Grokipedia</td>
+          <td>Grokipedia xAI, Grok encyclopedia, AI knowledge platform</td>
+        </tr>
+        <tr>
+          <td>articles/ai-introduction.html</td>
+          <td>Introduction to Artificial Intelligence for Beginners | Grokipedia</td>
+          <td>A genuinely clear, accurate, and practical introduction to what AI actually is — how it works, how it learns, written for curious non-experts.</td>
+          <td>introduction to artificial intelligence</td>
+          <td>AI for beginners, what is AI, machine learning explained</td>
+        </tr>
+        <tr>
+          <td>articles/ai-changing-everyday-life.html</td>
+          <td>How AI is Changing Everyday Life | Grokipedia</td>
+          <td>From smartphone keyboards to hospital diagnostics — a grounded look at how AI is reshaping daily experience right now.</td>
+          <td>AI changing everyday life</td>
+          <td>AI applications, real-world AI, AI in daily life</td>
+        </tr>
+        <tr>
+          <td>articles/grokipedia-vs-wikipedia.html</td>
+          <td>Grokipedia vs. Wikipedia: A Detailed Comparison | Grokipedia</td>
+          <td>An honest, structured comparison of Grokipedia and Wikipedia — their goals, editorial models, strengths, and which to use for different needs.</td>
+          <td>Grokipedia vs Wikipedia</td>
+          <td>AI encyclopedia comparison, Wikipedia alternative, knowledge platform comparison</td>
+        </tr>
+        <tr>
+          <td>articles/grokipedia-vs-google-ai.html</td>
+          <td>Grokipedia vs. Google AI: Different Tools, Different Goals | Grokipedia</td>
+          <td>A fair, detailed comparison of Grokipedia and Google AI — what each does, how they differ, and which to use for different needs.</td>
+          <td>Grokipedia vs Google AI</td>
+          <td>Grok vs Gemini, AI knowledge tools, Google AI comparison</td>
+        </tr>
+        <tr>
+          <td>articles/grokipedia-vs-openai.html</td>
+          <td>Grokipedia vs. OpenAI: How Do They Compare? | Grokipedia</td>
+          <td>xAI and OpenAI differ in philosophy, products, and safety approach. A detailed, honest comparison without the hype.</td>
+          <td>Grokipedia vs OpenAI</td>
+          <td>Grok vs ChatGPT, xAI vs OpenAI, AI company comparison</td>
+        </tr>
+        <tr>
+          <td>articles/benefits-and-risks.html</td>
+          <td>Benefits and Risks of Grokipedia | Grokipedia</td>
+          <td>A balanced, honest analysis of Grokipedia's genuine strengths and real limitations — how to use it responsibly.</td>
+          <td>Grokipedia benefits risks</td>
+          <td>AI encyclopedia pros cons, Grokipedia review, AI knowledge platform evaluation</td>
+        </tr>
+        <tr>
+          <td>articles/future-in-education.html</td>
+          <td>The Future of Grokipedia in Education | Grokipedia</td>
+          <td>How might AI-powered knowledge platforms reshape learning? What the evidence suggests about Grokipedia in educational contexts.</td>
+          <td>Grokipedia education</td>
+          <td>AI in education, AI learning platform, future of AI learning</td>
+        </tr>
+        <tr>
+          <td>articles/ai-tools-practical-uses.html</td>
+          <td>AI Tools and Their Practical Uses | Grokipedia</td>
+          <td>A grounded survey of the most useful AI tools available today — what each does well, where it falls short, and how to evaluate any new tool.</td>
+          <td>AI tools practical uses</td>
+          <td>best AI tools, ChatGPT uses, AI productivity tools, practical AI guide</td>
+        </tr>
+        <tr>
+          <td>articles/ethical-concerns-of-ai.html</td>
+          <td>Ethical Concerns of AI: What We Need to Talk About | Grokipedia</td>
+          <td>Bias, accountability, transparency, and power — the ethical questions around AI that are already real and demand serious attention.</td>
+          <td>ethical concerns of AI</td>
+          <td>AI ethics, AI bias, AI accountability, responsible AI</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <hr style="margin:56px 0 40px;border:none;border-top:1px solid var(--border);">
+
+    <!-- ── SECTION 2: INTERNAL LINKING MAP ── -->
+    <p class="section-label">Section 2</p>
+    <h2 class="section-title" style="margin-bottom:32px;">Internal Linking Map</h2>
+    <p style="color:var(--slate);margin-bottom:32px;">Each article links to 3–5 related articles using natural anchor text. The map below shows each article's outbound internal links.</p>
+
+    <div class="linking-item">
+      <h4>what-is-grokipedia.html → Links To:</h4>
+      <ul>
+        <li><a href="articles/benefits-and-risks.html">benefits-and-risks.html</a> — anchor: "benefits and risks article"</li>
+        <li><a href="articles/grokipedia-vs-wikipedia.html">grokipedia-vs-wikipedia.html</a> — anchor: "Grokipedia vs. Wikipedia"</li>
+        <li><a href="articles/grokipedia-vs-google-ai.html">grokipedia-vs-google-ai.html</a> — anchor: "Grokipedia vs. Google AI"</li>
+        <li><a href="articles/grokipedia-vs-openai.html">grokipedia-vs-openai.html</a> — anchor: "Grokipedia vs. OpenAI"</li>
+      </ul>
+    </div>
+
+    <div class="linking-item">
+      <h4>ai-introduction.html → Links To:</h4>
+      <ul>
+        <li><a href="articles/ai-changing-everyday-life.html">ai-changing-everyday-life.html</a> — anchor: "How AI is Changing Everyday Life"</li>
+        <li><a href="articles/ethical-concerns-of-ai.html">ethical-concerns-of-ai.html</a> — anchor: "the ethics of AI"</li>
+        <li><a href="articles/what-is-grokipedia.html">what-is-grokipedia.html</a> — anchor: "Understanding Grokipedia itself"</li>
+        <li><a href="articles/ai-tools-practical-uses.html">ai-tools-practical-uses.html</a> — anchor: "Using AI tools practically"</li>
+      </ul>
+    </div>
+
+    <div class="linking-item">
+      <h4>ai-changing-everyday-life.html → Links To:</h4>
+      <ul>
+        <li><a href="articles/future-in-education.html">future-in-education.html</a> — anchor: "the future of Grokipedia in education"</li>
+        <li><a href="articles/ethical-concerns-of-ai.html">ethical-concerns-of-ai.html</a> — anchor: "the ethics of AI"</li>
+        <li><a href="articles/ai-introduction.html">ai-introduction.html</a> — anchor: "Introduction to AI" (related card)</li>
+      </ul>
+    </div>
+
+    <div class="linking-item">
+      <h4>grokipedia-vs-wikipedia.html → Links To:</h4>
+      <ul>
+        <li><a href="articles/what-is-grokipedia.html">what-is-grokipedia.html</a> — anchor: (related card)</li>
+        <li><a href="articles/grokipedia-vs-google-ai.html">grokipedia-vs-google-ai.html</a> — anchor: (related card)</li>
+        <li><a href="articles/grokipedia-vs-openai.html">grokipedia-vs-openai.html</a> — anchor: (related card)</li>
+        <li><a href="articles/benefits-and-risks.html">benefits-and-risks.html</a> — anchor: (related card)</li>
+      </ul>
+    </div>
+
+    <div class="linking-item">
+      <h4>grokipedia-vs-google-ai.html → Links To:</h4>
+      <ul>
+        <li><a href="articles/grokipedia-vs-wikipedia.html">grokipedia-vs-wikipedia.html</a> — anchor: (related card)</li>
+        <li><a href="articles/grokipedia-vs-openai.html">grokipedia-vs-openai.html</a> — anchor: (related card)</li>
+        <li><a href="articles/what-is-grokipedia.html">what-is-grokipedia.html</a> — anchor: (related card)</li>
+        <li><a href="privacy.html">privacy.html</a> — anchor: "Privacy Policy" (inline)</li>
+      </ul>
+    </div>
+
+    <div class="linking-item">
+      <h4>grokipedia-vs-openai.html → Links To:</h4>
+      <ul>
+        <li><a href="articles/ethical-concerns-of-ai.html">ethical-concerns-of-ai.html</a> — anchor: "the article on AI ethics"</li>
+        <li><a href="articles/what-is-grokipedia.html">what-is-grokipedia.html</a> — anchor: (related card)</li>
+        <li><a href="articles/grokipedia-vs-wikipedia.html">grokipedia-vs-wikipedia.html</a> — anchor: (related card)</li>
+        <li><a href="articles/benefits-and-risks.html">benefits-and-risks.html</a> — anchor: (related card)</li>
+      </ul>
+    </div>
+
+    <div class="linking-item">
+      <h4>benefits-and-risks.html → Links To:</h4>
+      <ul>
+        <li><a href="articles/ethical-concerns-of-ai.html">ethical-concerns-of-ai.html</a> — anchor: "the ethical concerns of AI"</li>
+        <li><a href="articles/what-is-grokipedia.html">what-is-grokipedia.html</a> — anchor: (related card)</li>
+        <li><a href="articles/grokipedia-vs-wikipedia.html">grokipedia-vs-wikipedia.html</a> — anchor: (related card)</li>
+        <li><a href="articles/ai-introduction.html">ai-introduction.html</a> — anchor: (related card)</li>
+      </ul>
+    </div>
+
+    <div class="linking-item">
+      <h4>future-in-education.html → Links To:</h4>
+      <ul>
+        <li><a href="articles/ethical-concerns-of-ai.html">ethical-concerns-of-ai.html</a> — anchor: "AI ethics"</li>
+        <li><a href="articles/ai-introduction.html">ai-introduction.html</a> — anchor: (related card)</li>
+        <li><a href="articles/ai-tools-practical-uses.html">ai-tools-practical-uses.html</a> — anchor: (related card)</li>
+        <li><a href="articles/benefits-and-risks.html">benefits-and-risks.html</a> — anchor: (related card)</li>
+      </ul>
+    </div>
+
+    <div class="linking-item">
+      <h4>ai-tools-practical-uses.html → Links To:</h4>
+      <ul>
+        <li><a href="articles/ai-changing-everyday-life.html">ai-changing-everyday-life.html</a> — anchor: "How AI is Changing Everyday Life"</li>
+        <li><a href="articles/ethical-concerns-of-ai.html">ethical-concerns-of-ai.html</a> — anchor: "Ethical Concerns of AI"</li>
+        <li><a href="articles/ai-introduction.html">ai-introduction.html</a> — anchor: (related card)</li>
+        <li><a href="articles/future-in-education.html">future-in-education.html</a> — anchor: (related card)</li>
+      </ul>
+    </div>
+
+    <div class="linking-item">
+      <h4>ethical-concerns-of-ai.html → Links To:</h4>
+      <ul>
+        <li><a href="articles/ai-introduction.html">ai-introduction.html</a> — anchor: "Introduction to Artificial Intelligence for Beginners"</li>
+        <li><a href="articles/ai-tools-practical-uses.html">ai-tools-practical-uses.html</a> — anchor: "AI Tools and Their Practical Uses"</li>
+        <li><a href="articles/ai-changing-everyday-life.html">ai-changing-everyday-life.html</a> — anchor: (related card)</li>
+        <li><a href="articles/benefits-and-risks.html">benefits-and-risks.html</a> — anchor: (related card)</li>
+        <li><a href="articles/future-in-education.html">future-in-education.html</a> — anchor: (related card)</li>
+      </ul>
+    </div>
+
+    <hr style="margin:56px 0 40px;border:none;border-top:1px solid var(--border);">
+
+    <!-- ── SECTION 3: SCHEMA MARKUP ── -->
+    <p class="section-label">Section 3</p>
+    <h2 class="section-title" style="margin-bottom:32px;">JSON-LD Schema Markup</h2>
+    <p style="color:var(--slate);margin-bottom:32px;">The following schema snippets are embedded in the corresponding pages. Copy and customize for each new page added to the site.</p>
+
+    <h3 style="font-family:var(--display);font-size:20px;font-weight:700;margin-bottom:14px;">Organization Schema (index.html)</h3>
+    <div class="schema-block">
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Grokipedia",
+  "url": "https://grokexpedia.us",
+  "logo": "https://grokexpedia.us/images/logo.png",
+  "description": "An AI-powered knowledge encyclopedia providing in-depth, human-edited articles on artificial intelligence and technology.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Editorial",
+    "email": "editorial@grokexpedia.us"
+  }
+}
+&lt;/script&gt;
+    </div>
+
+    <h3 style="font-family:var(--display);font-size:20px;font-weight:700;margin-bottom:14px;">Article Schema (article pages)</h3>
+    <div class="schema-block">
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "[Article Title]",
+  "description": "[Meta description]",
+  "author": {
+    "@type": "Person",
+    "name": "Marcus T. Ellison"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Grokipedia",
+    "url": "https://grokexpedia.us"
+  },
+  "datePublished": "[YYYY-MM-DD]",
+  "dateModified": "[YYYY-MM-DD]",
+  "mainEntityOfPage": "https://grokexpedia.us/articles/[slug].html",
+  "image": "https://grokexpedia.us/images/articles/[slug]-og.jpg"
+}
+&lt;/script&gt;
+    </div>
+
+    <h3 style="font-family:var(--display);font-size:20px;font-weight:700;margin-bottom:14px;">BreadcrumbList Schema (article pages)</h3>
+    <div class="schema-block">
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://grokexpedia.us/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Articles",
+      "item": "https://grokexpedia.us/articles.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "[Article Title]",
+      "item": "https://grokexpedia.us/articles/[slug].html"
+    }
+  ]
+}
+&lt;/script&gt;
+    </div>
+
+    <h3 style="font-family:var(--display);font-size:20px;font-weight:700;margin-bottom:14px;">WebSite Schema (index.html)</h3>
+    <div class="schema-block">
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Grokipedia",
+  "url": "https://grokexpedia.us",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://grokexpedia.us/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+&lt;/script&gt;
+    </div>
+
+    <hr style="margin:56px 0 40px;border:none;border-top:1px solid var(--border);">
+
+    <!-- ── SECTION 4: ADSENSE COMPLIANCE CHECKLIST ── -->
+    <p class="section-label">Section 4</p>
+    <h2 class="section-title" style="margin-bottom:32px;">Google AdSense Compliance Checklist</h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div style="padding:20px;background:var(--warm-white);border:1px solid var(--border-dark);">
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:green;margin-bottom:10px;">✓ Content Quality</div>
+        <ul style="font-size:14px;color:var(--slate);padding-left:18px;line-height:1.8;">
+          <li>10 long-form articles (1,200–1,800+ words each)</li>
+          <li>No thin content — every article delivers substantial value</li>
+          <li>No duplicate content — all articles are original</li>
+          <li>Human editorial review on all content</li>
+          <li>Articles cover topics thoroughly, not superficially</li>
+        </ul>
+      </div>
+      <div style="padding:20px;background:var(--warm-white);border:1px solid var(--border-dark);">
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:green;margin-bottom:10px;">✓ Site Structure</div>
+        <ul style="font-size:14px;color:var(--slate);padding-left:18px;line-height:1.8;">
+          <li>Clear navigation menu on every page</li>
+          <li>About Us page with author details and mission</li>
+          <li>Contact page with working contact form</li>
+          <li>Privacy Policy (AdSense-compliant)</li>
+          <li>Disclaimer and Terms &amp; Conditions</li>
+        </ul>
+      </div>
+      <div style="padding:20px;background:var(--warm-white);border:1px solid var(--border-dark);">
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:green;margin-bottom:10px;">✓ Trust Signals</div>
+        <ul style="font-size:14px;color:var(--slate);padding-left:18px;line-height:1.8;">
+          <li>Named authors with credentials and bios</li>
+          <li>Published/updated dates on all articles</li>
+          <li>Editorial standards publicly stated</li>
+          <li>Corrections policy documented</li>
+          <li>E-E-A-T framework implemented throughout</li>
+        </ul>
+      </div>
+      <div style="padding:20px;background:var(--warm-white);border:1px solid var(--border-dark);">
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:green;margin-bottom:10px;">✓ Technical</div>
+        <ul style="font-size:14px;color:var(--slate);padding-left:18px;line-height:1.8;">
+          <li>Responsive design — mobile-first layout</li>
+          <li>Semantic HTML5 (header, nav, article, footer)</li>
+          <li>JSON-LD schema on every page</li>
+          <li>Canonical URLs on all pages</li>
+          <li>No misleading claims or deceptive navigation</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <footer><div class="footer-inner"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo" style="color:white;">Grok<span style="color:var(--accent)">expedia</span></a><p>An independent knowledge platform covering AI and technology.</p></div>
+    <div class="footer-col"><h5>Articles</h5><ul><li><a href="articles/what-is-grokipedia.html">What is Grokipedia</a></li><li><a href="articles/ai-introduction.html">AI for Beginners</a></li><li><a href="articles.html">View All →</a></li></ul></div>
+    <div class="footer-col"><h5>Site</h5><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+  </div><div class="footer-bottom"><span>© 2026 Grokexpedia</span><span><a href="privacy.html">Privacy</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="terms.html">Terms</a></span></div></div></footer>
+</body>
+</html>

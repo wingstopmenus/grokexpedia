@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse by Category | Grokipedia</title>
+  <meta name="description" content="Browse Grokipedia articles by topic category — Artificial Intelligence, Technology, Guides, Digital Trends, and Ethics." />
+  <link rel="canonical" href="https://grokexpedia.us/categories.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .big-cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .big-cat-card {
+      border: 1px solid var(--border-dark);
+      padding: 36px 28px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .big-cat-card::after {
+      content: '→';
+      position: absolute;
+      bottom: 28px; right: 28px;
+      font-size: 20px;
+      color: var(--border-dark);
+      transition: all 0.2s;
+    }
+    .big-cat-card:hover { border-color: var(--accent); background: var(--warm-white); }
+    .big-cat-card:hover::after { color: var(--accent); transform: translateX(4px); }
+    .big-cat-card .icon { font-size: 36px; margin-bottom: 16px; display: block; }
+    .big-cat-card h2 { font-family: var(--display); font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+    .big-cat-card p { font-size: 14.5px; color: var(--slate); line-height: 1.65; margin-bottom: 16px; }
+    .big-cat-card .count { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.08em; }
+  </style>
+</head>
+<body>
+  <div class="topbar"><a href="index.html">← Back to Grokipedia Home</a></div>
+  <header><div class="header-inner">
+    <a href="index.html" class="logo">Grok<span class="accent">expedia</span><span class="logo-badge">Beta</span></a>
+    <nav><ul><li><a href="index.html">Home</a></li><li><a href="articles.html">Articles</a></li><li><a href="categories.html" class="active">Categories</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="nav-cta">Contact</a></li></ul></nav>
+  </div></header>
+
+  <div class="prose-header">
+    <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
+      <h1>Browse by Category</h1>
+      <p>Articles organized by subject area — find the topics most relevant to what you want to learn.</p>
+    </div>
+  </div>
+
+  <div class="section"><div class="container">
+    <p class="section-label">All Topics</p>
+    <h2 class="section-title" style="margin-bottom:40px;">Knowledge Categories</h2>
+    <div class="big-cat-grid">
+
+      <a href="categories/artificial-intelligence.html" class="big-cat-card">
+        <span class="icon">🤖</span>
+        <h2>Artificial Intelligence</h2>
+        <p>What AI is, how it learns, what different approaches exist, and what it means for the world. The foundation for understanding everything else on this site.</p>
+        <div class="count">4 Articles</div>
+      </a>
+
+      <a href="categories/technology.html" class="big-cat-card">
+        <span class="icon">💻</span>
+        <h2>Technology</h2>
+        <p>Tools, platforms, and technical systems reshaping how we communicate, navigate, work, and make decisions. Covered with depth and without hype.</p>
+        <div class="count">3 Articles</div>
+      </a>
+
+      <a href="categories/guides.html" class="big-cat-card">
+        <span class="icon">📖</span>
+        <h2>Guides</h2>
+        <p>Practical, actionable breakdowns — designed to help you understand and use AI tools effectively, not just know they exist.</p>
+        <div class="count">2 Articles</div>
+      </a>
+
+      <a href="categories/digital-trends.html" class="big-cat-card">
+        <span class="icon">📈</span>
+        <h2>Digital Trends</h2>
+        <p>The patterns emerging now that point toward tomorrow — education, communication, work, and the structural shifts technology is producing.</p>
+        <div class="count">2 Articles</div>
+      </a>
+
+      <a href="categories/ethics.html" class="big-cat-card">
+        <span class="icon">⚖️</span>
+        <h2>Ethics &amp; Society</h2>
+        <p>The harder questions: bias, accountability, power, surveillance, and fairness. The human concerns that sit underneath the technical ones.</p>
+        <div class="count">1 Article</div>
+      </a>
+
+    </div>
+  </div></div>
+
+  <footer><div class="footer-inner"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo" style="color:white;">Grok<span style="color:var(--accent)">expedia</span></a><p>An independent knowledge platform covering AI and technology.</p></div>
+    <div class="footer-col"><h5>Articles</h5><ul><li><a href="articles/what-is-grokipedia.html">What is Grokipedia</a></li><li><a href="articles/ai-introduction.html">AI for Beginners</a></li><li><a href="articles.html">View All →</a></li></ul></div>
+    <div class="footer-col"><h5>Site</h5><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
+    <div class="footer-col"><h5>Categories</h5><ul><li><a href="categories/artificial-intelligence.html">Artificial Intelligence</a></li><li><a href="categories/technology.html">Technology</a></li><li><a href="categories/guides.html">Guides</a></li><li><a href="categories/ethics.html">Ethics</a></li></ul></div>
+  </div><div class="footer-bottom"><span>© 2026 Grokexpedia</span><span><a href="privacy.html">Privacy</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="terms.html">Terms</a></span></div></div></footer>
+</body>
+</html>

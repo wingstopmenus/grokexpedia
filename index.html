@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grokipedia – The AI-Powered Knowledge Encyclopedia | grokexpedia.us</title>
+  <meta name="description" content="Grokipedia is a modern AI-powered encyclopedia built for real people. Explore in-depth articles on artificial intelligence, technology, and the future — written in plain, trusted language." />
+  <meta name="keywords" content="Grokipedia, xAI encyclopedia, AI knowledge base, artificial intelligence explained, Grok AI, Grokipedia, xAI encyclopedia, Grokexpedia, AI encyclopedia, Grok AI, Elon Musk Grokipedia, Wikipedia alternative, truthful AI, xAI Grok, AI knowledge base, Grokipedia 2026, Elon Musk AI, Grok-3, AI-generated content, real-time encyclopedia" />
+  <link rel="canonical" href="https://grokexpedia.us/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Grokipedia",
+    "url": "https://grokexpedia.us",
+    "logo": "https://grokexpedia.us/images/logo.png",
+    "description": "An AI-powered knowledge encyclopedia providing in-depth, human-edited articles on artificial intelligence and technology.",
+    "sameAs": [],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Editorial",
+      "email": "editorial@grokexpedia.us"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Grokipedia",
+    "url": "https://grokexpedia.us",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://grokexpedia.us/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --ink: #0f0f0f;
+      --paper: #faf8f4;
+      --warm-white: #f5f2eb;
+      --accent: #c8392b;
+      --accent-dark: #9b2a1e;
+      --gold: #d4a017;
+      --slate: #4a4a5a;
+      --border: #e0dbd0;
+      --border-dark: #c5bfb0;
+      --mono: 'JetBrains Mono', monospace;
+      --serif: 'Source Serif 4', Georgia, serif;
+      --display: 'Playfair Display', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--serif);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── TOPBAR ─── */
+    .topbar {
+      background: var(--ink);
+      color: #ccc;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      letter-spacing: 0.08em;
+      padding: 7px 0;
+      text-align: center;
+      border-bottom: 2px solid var(--accent);
+    }
+    .topbar a { color: var(--gold); text-decoration: none; }
+
+    /* ─── HEADER ─── */
+    header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--border-dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: var(--display);
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo span.accent { color: var(--accent); }
+    .logo-badge {
+      font-family: var(--mono);
+      font-size: 9px;
+      background: var(--accent);
+      color: white;
+      padding: 2px 7px;
+      border-radius: 2px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    nav a {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--slate);
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 2px;
+      transition: all 0.18s;
+    }
+    nav a:hover { background: var(--warm-white); color: var(--accent); }
+    nav a.active { color: var(--accent); font-weight: 500; }
+    .nav-cta {
+      background: var(--ink) !important;
+      color: white !important;
+      padding: 7px 16px !important;
+    }
+    .nav-cta:hover { background: var(--accent) !important; }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: var(--ink);
+      color: white;
+      padding: 88px 24px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: 
+        radial-gradient(ellipse 60% 80% at 80% 20%, rgba(200,57,43,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 10% 90%, rgba(212,160,23,0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .hero-kicker {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-kicker::before {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(38px, 6vw, 68px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: #d4a017;
+    }
+    .hero-sub {
+      font-size: 19px;
+      color: rgba(255,255,255,0.72);
+      max-width: 640px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s;
+      font-weight: 500;
+    }
+    .btn-primary:hover { background: var(--accent-dark); }
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 13px 28px;
+      text-decoration: none;
+      border-radius: 2px;
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+    .hero-stats {
+      margin-top: 56px;
+      display: flex;
+      gap: 48px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-stat .num {
+      font-family: var(--display);
+      font-size: 32px;
+      font-weight: 700;
+      color: white;
+    }
+    .hero-stat .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-top: 2px;
+    }
+
+    /* ─── SECTION BASICS ─── */
+    .section { padding: 72px 24px; }
+    .section-alt { background: var(--warm-white); }
+    .section-dark { background: var(--ink); color: white; }
+    .container { max-width: 1180px; margin: 0 auto; }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .section-sub {
+      color: var(--slate);
+      font-size: 17px;
+      max-width: 580px;
+      margin-bottom: 48px;
+    }
+
+    /* ─── FEATURED ARTICLES ─── */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2px;
+      background: var(--border-dark);
+      border: 1px solid var(--border-dark);
+    }
+    .article-card {
+      background: var(--paper);
+      padding: 32px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.18s;
+      display: block;
+    }
+    .article-card:hover { background: var(--warm-white); }
+    .article-card.hero-card { padding: 40px; }
+    .article-card .cat-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .article-card h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+    .article-card.hero-card h3 { font-size: 28px; }
+    .article-card h3 { font-size: 18px; }
+    .article-card p {
+      color: var(--slate);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    .articles-side { display: flex; flex-direction: column; gap: 2px; }
+    .article-card .read-more {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 18px;
+      display: inline-block;
+    }
+    .article-num {
+      font-family: var(--display);
+      font-size: 64px;
+      font-weight: 900;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: -8px;
+    }
+
+    /* ─── CATEGORIES ─── */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .cat-card {
+      border: 1px solid var(--border-dark);
+      padding: 28px 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.18s;
+      position: relative;
+      overflow: hidden;
+    }
+    .cat-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
+    }
+    .cat-card:hover::before { transform: scaleX(1); }
+    .cat-card:hover { border-color: var(--accent); background: var(--warm-white); }
+    .cat-icon { font-size: 28px; margin-bottom: 12px; display: block; }
+    .cat-name {
+      font-family: var(--display);
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .cat-desc { font-size: 13.5px; color: var(--slate); line-height: 1.55; }
+    .cat-count {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      margin-top: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    /* ─── TRUST SECTION ─── */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 32px;
+    }
+    .trust-item { display: flex; gap: 18px; }
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(200,57,43,0.1);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .trust-item h4 {
+      font-family: var(--display);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .trust-item p { font-size: 14px; color: var(--slate); line-height: 1.6; }
+
+    /* ─── AUTHOR STRIP ─── */
+    .author-strip {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 40px;
+      background: var(--warm-white);
+      border: 1px solid var(--border-dark);
+    }
+    .author-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: var(--display);
+      font-size: 28px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .author-info .name {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .author-info .role {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .author-info .bio { font-size: 14.5px; color: var(--slate); margin-top: 6px; }
+
+    /* ─── LATEST ARTICLES LIST ─── */
+    .articles-list { display: flex; flex-direction: column; gap: 0; }
+    .article-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: start;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: padding-left 0.18s;
+    }
+    .article-row:hover { padding-left: 8px; }
+    .article-row:first-child { border-top: 1px solid var(--border); }
+    .article-row .idx {
+      font-family: var(--mono);
+      font-size: 22px;
+      color: var(--border-dark);
+      font-weight: 500;
+      padding-top: 2px;
+      min-width: 36px;
+    }
+    .article-row h4 {
+      font-family: var(--display);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .article-row p { font-size: 14px; color: var(--slate); }
+    .article-row .meta {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--border-dark);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    /* ─── NEWSLETTER / CTA ─── */
+    .cta-block {
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+    .cta-block .section-title { color: white; }
+    .cta-block p { color: rgba(255,255,255,0.65); margin-bottom: 32px; font-size: 17px; }
+    .cta-form {
+      display: flex;
+      gap: 0;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    .cta-form input {
+      flex: 1;
+      padding: 14px 18px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.07);
+      color: white;
+      font-family: var(--serif);
+      font-size: 15px;
+      outline: none;
+      border-radius: 2px 0 0 2px;
+    }
+    .cta-form input::placeholder { color: rgba(255,255,255,0.35); }
+    .cta-form button {
+      padding: 14px 24px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 0 2px 2px 0;
+      transition: background 0.2s;
+    }
+    .cta-form button:hover { background: var(--accent-dark); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #080808;
+      color: rgba(255,255,255,0.55);
+      padding: 64px 24px 32px;
+      border-top: 3px solid var(--accent);
+    }
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .logo { color: white; font-size: 22px; margin-bottom: 14px; display: inline-flex; }
+    .footer-brand p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.45); }
+    .footer-col h5 {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.15s;
+    }
+    .footer-col a:hover { color: white; }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.3);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    .footer-bottom a:hover { color: white; }
+
+    /* ─── DIVIDER ─── */
+    .rule { border: none; border-top: 1px solid var(--border); margin: 0; }
+    .rule-dark { border-color: rgba(255,255,255,0.1); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 860px) {
+      .articles-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .hero-stats { gap: 28px; flex-wrap: wrap; }
+    }
+    @media (max-width: 600px) {
+      nav { display: none; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .cta-form { flex-direction: column; }
+      .cta-form input { border-radius: 2px; }
+      .cta-form button { border-radius: 2px; }
+      .article-row { grid-template-columns: 1fr; gap: 8px; }
+      .article-row .idx, .article-row .meta { display: none; }
+    }
+
+    /* ─── MOBILE NAV TOGGLE ─── */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-dark);
+      padding: 8px 12px;
+      font-family: var(--mono);
+      font-size: 12px;
+      cursor: pointer;
+      color: var(--ink);
+      border-radius: 2px;
+    }
+    @media (max-width: 600px) { .menu-toggle { display: block; } }
+
+    /* animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-inner > * {
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-inner > *:nth-child(1) { animation-delay: 0.1s; }
+    .hero-inner > *:nth-child(2) { animation-delay: 0.22s; }
+    .hero-inner > *:nth-child(3) { animation-delay: 0.34s; }
+    .hero-inner > *:nth-child(4) { animation-delay: 0.46s; }
+    .hero-inner > *:nth-child(5) { animation-delay: 0.58s; }
+  </style>
+</head>
+<body>
+
+  <!-- Top announcement bar -->
+  <div class="topbar">
+    📚 Grokipedia — Your trusted AI knowledge companion &nbsp;|&nbsp; 
+    <a href="articles/what-is-grokipedia.html">Start with: What is Grokipedia? →</a>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        Grok<span class="accent">expedia</span>
+        <span class="logo-badge">Beta</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" onclick="document.querySelector('nav').style.display='block'">☰ Menu</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-kicker">AI-Powered Encyclopedia</p>
+      <h1>Know More.<br><em>Understand Better.</em><br>Think Clearly.</h1>
+      <p class="hero-sub">
+        Grokipedia is a modern knowledge platform built around xAI's Grok technology — delivering deep, human-readable explanations of artificial intelligence, technology, and the ideas shaping tomorrow.
+      </p>
+      <div class="hero-actions">
+        <a href="articles.html" class="btn-primary">Explore Articles</a>
+        <a href="about.html" class="btn-secondary">Our Editorial Mission</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">10+</div>
+          <div class="label">In-Depth Articles</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">5</div>
+          <div class="label">Topic Categories</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">100%</div>
+          <div class="label">Human-Edited Content</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">E-E-A-T</div>
+          <div class="label">Editorial Standard</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Articles -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Featured Reading</p>
+      <h2 class="section-title">Start Here: Essential Articles</h2>
+      <p class="section-sub">Every article on this site is written to give you real, usable knowledge — not vague summaries.</p>
+
+      <div class="articles-grid">
+        <!-- Hero article -->
+        <a href="articles/what-is-grokipedia.html" class="article-card hero-card">
+          <span class="cat-tag">Foundation</span>
+          <img src="images/grokipedia-knowledge-network-visualization.webp" alt="Grokipedia knowledge network visualization" style="width: 100%; height: auto;">
+          <h3>What is Grokipedia and How Does It Actually Work?</h3>
+          <p>Most AI tools answer questions. Grokipedia does something different — it builds knowledge. Learn how xAI's Grok technology powers a new kind of encyclopedia that explains concepts, not just facts, and why that distinction matters enormously.</p>
+          <span class="read-more">Read Full Article →</span>
+        </a>
+
+        <!-- Side articles -->
+        <div class="articles-side">
+          <a href="articles/ai-introduction.html" class="article-card">
+            <span class="cat-tag">AI Basics</span>
+            <h3>A Real Beginner's Introduction to Artificial Intelligence</h3>
+            <p>No buzzwords. No assumptions. Just a clear, grounded walkthrough of what AI is and why it matters.</p>
+            <span class="read-more">Read →</span>
+          </a>
+          <a href="articles/grokipedia-vs-wikipedia.html" class="article-card">
+            <span class="cat-tag">Comparison</span>
+            <h3>Grokipedia vs. Wikipedia: What's Actually Different?</h3>
+            <p>Both aim to inform. But their approaches, strengths, and audiences are worlds apart. A fair, detailed comparison.</p>
+            <span class="read-more">Read →</span>
+          </a>
+          <a href="articles/ai-changing-everyday-life.html" class="article-card">
+            <span class="cat-tag">Technology</span>
+            <h3>How AI is Changing Everyday Life (Right Now)</h3>
+            <p>From your phone's keyboard to hospital diagnostics — real-world AI is already reshaping daily experience.</p>
+            <span class="read-more">Read →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Articles List -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="section-label">All Articles</p>
+      <h2 class="section-title">Complete Knowledge Library</h2>
+
+      <div class="articles-list">
+        <a href="articles/what-is-grokipedia.html" class="article-row">
+          <span class="idx">01</span>
+          <div>
+            <h4>What is Grokipedia and How It Works</h4>
+            <p>A complete guide to the platform, its origin in xAI, and why it represents a new model for AI-powered knowledge.</p>
+          </div>
+          <div class="meta">Foundation<br>~1,500 words</div>
+        </a>
+        <a href="articles/ai-introduction.html" class="article-row">
+          <span class="idx">02</span>
+          <div>
+            <h4>Introduction to Artificial Intelligence for Beginners</h4>
+            <p>What AI really is, how it learns, and why the term "intelligence" is more complicated than it sounds.</p>
+          </div>
+          <div class="meta">AI Basics<br>~1,600 words</div>
+        </a>
+        <a href="articles/ai-changing-everyday-life.html" class="article-row">
+          <span class="idx">03</span>
+          <div>
+            <h4>How AI is Changing Everyday Life</h4>
+            <p>Real applications you encounter daily — and what they reveal about where technology is heading.</p>
+          </div>
+          <div class="meta">Technology<br>~1,400 words</div>
+        </a>
+        <a href="articles/grokipedia-vs-wikipedia.html" class="article-row">
+          <span class="idx">04</span>
+          <div>
+            <h4>Grokipedia vs. Wikipedia: A Detailed Comparison</h4>
+            <p>Structure, sourcing, strengths, and weaknesses — an honest side-by-side look at two very different encyclopedias.</p>
+          </div>
+          <div class="meta">Comparison<br>~1,500 words</div>
+        </a>
+        <a href="articles/grokipedia-vs-google-ai.html" class="article-row">
+          <span class="idx">05</span>
+          <div>
+            <h4>Grokipedia vs. Google AI: Different Tools, Different Goals</h4>
+            <p>Search and encyclopedic knowledge serve different purposes. Understanding which to use — and when — is surprisingly important.</p>
+          </div>
+          <div class="meta">Comparison<br>~1,450 words</div>
+        </a>
+        <a href="articles/grokipedia-vs-openai.html" class="article-row">
+          <span class="idx">06</span>
+          <div>
+            <h4>Grokipedia vs. OpenAI: How Do They Compare?</h4>
+            <p>xAI and OpenAI are frequently mentioned in the same breath. Here's where they genuinely differ — and where they overlap.</p>
+          </div>
+          <div class="meta">Comparison<br>~1,550 words</div>
+        </a>
+        <a href="articles/benefits-and-risks.html" class="article-row">
+          <span class="idx">07</span>
+          <div>
+            <h4>Benefits and Risks of Grokipedia</h4>
+            <p>Every powerful tool has trade-offs. A clear-eyed look at what Grokipedia does well — and what users should be cautious about.</p>
+          </div>
+          <div class="meta">Analysis<br>~1,600 words</div>
+        </a>
+        <a href="articles/future-in-education.html" class="article-row">
+          <span class="idx">08</span>
+          <div>
+            <h4>The Future of Grokipedia in Education</h4>
+            <p>Could AI-powered knowledge platforms replace textbooks? What the research and early experiments actually suggest.</p>
+          </div>
+          <div class="meta">Education<br>~1,500 words</div>
+        </a>
+        <a href="articles/ai-tools-practical-uses.html" class="article-row">
+          <span class="idx">09</span>
+          <div>
+            <h4>AI Tools and Their Practical Uses</h4>
+            <p>A grounded survey of the most useful AI tools available today — what they do well and where they fall short.</p>
+          </div>
+          <div class="meta">Guides<br>~1,400 words</div>
+        </a>
+        <a href="articles/ethical-concerns-of-ai.html" class="article-row">
+          <span class="idx">10</span>
+          <div>
+            <h4>Ethical Concerns of AI: What We Need to Talk About</h4>
+            <p>Bias, accountability, transparency, and power — the ethical questions that don't have easy answers, and why they demand serious attention.</p>
+          </div>
+          <div class="meta">Ethics<br>~1,700 words</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Browse by Topic</p>
+      <h2 class="section-title">Knowledge Categories</h2>
+      <p class="section-sub">Explore topics organized by subject area. Each category contains multiple in-depth articles.</p>
+
+      <div class="categories-grid">
+        <a href="categories/artificial-intelligence.html" class="cat-card">
+          <span class="cat-icon">🤖</span>
+          <div class="cat-name">Artificial Intelligence</div>
+          <p class="cat-desc">What AI is, how it works, and what it means for society — explained without jargon.</p>
+          <div class="cat-count">4 Articles</div>
+        </a>
+        <a href="categories/technology.html" class="cat-card">
+          <span class="cat-icon">💻</span>
+          <div class="cat-name">Technology</div>
+          <p class="cat-desc">Tools, trends, and the technical systems reshaping how we live and work.</p>
+          <div class="cat-count">3 Articles</div>
+        </a>
+        <a href="categories/guides.html" class="cat-card">
+          <span class="cat-icon">📖</span>
+          <div class="cat-name">Guides</div>
+          <p class="cat-desc">Practical, step-by-step breakdowns designed to help you actually do things.</p>
+          <div class="cat-count">2 Articles</div>
+        </a>
+        <a href="categories/digital-trends.html" class="cat-card">
+          <span class="cat-icon">📈</span>
+          <div class="cat-name">Digital Trends</div>
+          <p class="cat-desc">Where technology is heading and what today's patterns tell us about tomorrow.</p>
+          <div class="cat-count">2 Articles</div>
+        </a>
+        <a href="categories/ethics.html" class="cat-card">
+          <span class="cat-icon">⚖️</span>
+          <div class="cat-name">Ethics &amp; Society</div>
+          <p class="cat-desc">The human questions behind the technical ones — accountability, fairness, and power.</p>
+          <div class="cat-count">1 Article</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust / Why Us -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="section-label">Why Trust Grokipedia</p>
+      <h2 class="section-title">Our Editorial Promise</h2>
+      <p class="section-sub">We hold ourselves to the same standards we'd expect from any publication we rely on.</p>
+
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">✍️</div>
+          <div>
+            <h4>Human Editorial Review</h4>
+            <p>Every article is written and reviewed by humans with subject expertise — not auto-generated and published without oversight.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🔍</div>
+          <div>
+            <h4>Fact-Based, Cited Writing</h4>
+            <p>Claims are grounded in verifiable information. We cite sources, acknowledge uncertainty, and correct errors promptly.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">⚖️</div>
+          <div>
+            <h4>Neutral, Balanced Perspective</h4>
+            <p>We present multiple sides of complex topics. Our job is to inform your thinking — not steer it.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🔄</div>
+          <div>
+            <h4>Regularly Updated Content</h4>
+            <p>AI moves fast. We update articles when new information changes our understanding of a topic.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🎓</div>
+          <div>
+            <h4>Written for Real People</h4>
+            <p>We write for curious readers — not academics, not engineers. Plain language with depth, not dumbing down.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🚫</div>
+          <div>
+            <h4>No Advertising Bias</h4>
+            <p>Our editorial decisions are independent. We don't write to sell products or favor any company — including xAI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Author Profile -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Our Team</p>
+      <h2 class="section-title">The Editorial Voice Behind Grokipedia</h2>
+      <p class="section-sub">Content shaped by people who understand both the technology and how to explain it honestly.</p>
+
+      <div class="author-strip">
+        <div class="author-avatar">M</div>
+        <div class="author-info">
+          <div class="name">Marcus T. Ellison</div>
+          <div class="role">Lead Editor & Technology Writer</div>
+          <p class="bio">Marcus has spent over a decade writing about emerging technology for general audiences. A former science journalist with a background in cognitive science, he specializes in translating complex AI topics into clear, accurate, and genuinely useful explanations. He reviews every article published on Grokipedia before publication.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Newsletter -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="cta-block">
+        <p class="section-label" style="color: var(--gold);">Stay Informed</p>
+        <h2 class="section-title">Get New Articles Delivered</h2>
+        <p>We publish thoughtful, in-depth pieces on AI and technology. No spam — just knowledge, when it's ready.</p>
+        <form class="cta-form" onsubmit="return false;">
+          <input type="email" placeholder="your@email.com" aria-label="Email address" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p style="font-size:12px; color:rgba(255,255,255,0.3); margin-top:16px; font-family:var(--mono);">
+          By subscribing you agree to our <a href="privacy.html" style="color:rgba(255,255,255,0.45);">Privacy Policy</a>. Unsubscribe at any time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color:white;">Grok<span style="color:var(--accent)">expedia</span></a>
+          <p>An independent knowledge platform covering artificial intelligence, technology, and the ideas shaping our world. Written for curious humans — not algorithms.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Articles</h5>
+          <ul>
+            <li><a href="articles/what-is-grokipedia.html">What is Grokipedia</a></li>
+            <li><a href="articles/ai-introduction.html">AI for Beginners</a></li>
+            <li><a href="articles/grokipedia-vs-wikipedia.html">vs. Wikipedia</a></li>
+            <li><a href="articles/ethical-concerns-of-ai.html">AI Ethics</a></li>
+            <li><a href="articles.html">View All →</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="categories/artificial-intelligence.html">Artificial Intelligence</a></li>
+            <li><a href="categories/technology.html">Technology</a></li>
+            <li><a href="categories/guides.html">Guides</a></li>
+            <li><a href="categories/digital-trends.html">Digital Trends</a></li>
+            <li><a href="categories/ethics.html">Ethics &amp; Society</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Site</h5>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Grokexpedia — All rights reserved.</span>
+        <span>
+          <a href="privacy.html">Privacy</a> · 
+          <a href="disclaimer.html">Disclaimer</a> · 
+          <a href="terms.html">Terms</a> · 
+          <a href="contact.html">Contact</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

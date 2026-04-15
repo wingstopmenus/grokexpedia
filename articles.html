@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Articles | Grokipedia</title>
+  <meta name="description" content="Browse all Grokipedia articles on artificial intelligence, technology, ethics, and the future of AI-powered knowledge." />
+  <link rel="canonical" href="https://grokexpedia.us/articles.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .articles-full-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2px;
+      background: var(--border-dark);
+      border: 1px solid var(--border-dark);
+    }
+    .article-tile {
+      background: var(--paper);
+      padding: 32px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.18s;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .article-tile:hover { background: var(--warm-white); }
+    .article-tile .cat {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .article-tile h3 {
+      font-family: var(--display);
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .article-tile p {
+      font-size: 14px;
+      color: var(--slate);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .article-tile .meta {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--border-dark);
+      display: flex;
+      justify-content: space-between;
+      margin-top: 6px;
+    }
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border: 1px solid var(--border-dark);
+      background: none;
+      color: var(--slate);
+      cursor: pointer;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.18s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--ink);
+      color: white;
+      border-color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"><a href="index.html">← Back to Grokipedia Home</a></div>
+  <header><div class="header-inner">
+    <a href="index.html" class="logo">Grok<span class="accent">expedia</span><span class="logo-badge">Beta</span></a>
+    <nav><ul><li><a href="index.html">Home</a></li><li><a href="articles.html" class="active">Articles</a></li><li><a href="categories.html">Categories</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="nav-cta">Contact</a></li></ul></nav>
+  </div></header>
+
+  <div class="prose-header">
+    <div style="max-width:1180px;margin:0 auto;padding:0 24px;">
+      <h1>All Articles</h1>
+      <p>10 in-depth articles on AI, technology, and the ideas shaping our world — written for curious non-specialists.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <a href="articles.html" class="filter-btn active">All</a>
+        <a href="categories/artificial-intelligence.html" class="filter-btn">Artificial Intelligence</a>
+        <a href="categories/technology.html" class="filter-btn">Technology</a>
+        <a href="categories/guides.html" class="filter-btn">Guides</a>
+        <a href="categories/digital-trends.html" class="filter-btn">Digital Trends</a>
+        <a href="categories/ethics.html" class="filter-btn">Ethics</a>
+      </div>
+
+      <div class="articles-full-grid">
+
+        <a href="articles/what-is-grokipedia.html" class="article-tile">
+          <span class="cat">Foundation</span>
+          <h3>What is Grokipedia and How It Works</h3>
+          <p>A complete, honest explanation of the platform — its connection to xAI, how it differs from other knowledge tools, and why the encyclopedic model matters for AI-powered knowledge.</p>
+          <div class="meta"><span>Marcus T. Ellison</span><span>~8 min read</span></div>
+        </a>
+
+        <a href="articles/ai-introduction.html" class="article-tile">
+          <span class="cat">AI Basics</span>
+          <h3>Introduction to Artificial Intelligence for Beginners</h3>
+          <p>No computer science degree required. A genuinely clear, accurate walkthrough of what AI is, how it learns, and why the distinction between AI, machine learning, and deep learning actually matters.</p>
+          <div class="meta"><span>Marcus T. Ellison</span><span>~9 min read</span></div>
+        </a>
+
+        <a href="articles/ai-changing-everyday-life.html" class="article-tile">
+          <span class="cat">Technology</span>
+          <h3>How AI is Changing Everyday Life</h3>
+          <p>From spam filters to hospital imaging — specific, grounded examples of AI already embedded in daily experience, and what those applications reveal about the technology's real strengths and limitations.</p>
+          <div class="meta"><span>Marcus T. Ellison</span><span>~8 min read</span></div>
+        </a>
+
+        <a href="articles/grokipedia-vs-wikipedia.html" class="article-tile">
+          <span class="cat">Comparison</span>
+          <h3>Grokipedia vs. Wikipedia: A Detailed Comparison</h3>
+          <p>Two encyclopedias, two editorial philosophies, two different strengths. An honest, structured comparison — including when each one serves you better.</p>
+          <div class="meta"><span>Marcus T. Ellison</span><span>~8 min read</span></div>
+        </a>
+
+        <a href="articles/grokipedia-vs-google-ai.html" class="article-tile">
+          <span class="cat">Comparison</span>
+          <h3>Grokipedia vs. Google AI: Different Tools, Different Goals</h3>
+          <p>Google's AI is everywhere. Grokipedia is focused. Understanding the difference between a search-oriented AI ecosystem and a knowledge platform helps you use both more effectively.</p>
+          <div class="meta"><span>Marcus T. Ellison</span><span>~8 min read</span></div>
+        </a>
+
+        <a href="articles/grokipedia-vs-openai.html" class="article-tile">
+          <span class="cat">Comparison</span>
+          <h3>Grokipedia vs. OpenAI: How Do They Compare?</h3>
+          <p>xAI and OpenAI are often mentioned together, but their products, philosophies, and approaches differ in ways that matter. A grounded comparison without the hype.</p>
+          <div class="meta"><span>Marcus T. Ellison</span><span>~9 min read</span></div>
+        </a>
+
+        <a href="articles/benefits-and-risks.html" class="article-tile">
+          <span class="cat">Analysis</span>
+          <h3>Benefits and Risks of Grokipedia</h3>
+          <p>A clear-eyed evaluation of what Grokipedia genuinely does well, where its limitations are real, and how to use it in a way that maximizes its value while avoiding its pitfalls.</p>
+          <div class="meta"><span>Marcus T. Ellison</span><span>~7 min read</span></div>
+        </a>
+
+        <a href="articles/future-in-education.html" class="article-tile">
+          <span class="cat">Education · Digital Trends</span>
+          <h3>The Future of Grokipedia in Education</h3>
+          <p>How AI-powered knowledge platforms could reshape learning — and what the evidence, not the hype, actually suggests about where this is going.</p>
+          <div class="meta"><span>Marcus T. Ellison</span><span>~8 min read</span></div>
+        </a>
+
+        <a href="articles/ai-tools-practical-uses.html" class="article-tile">
+          <span class="cat">Guides</span>
+          <h3>AI Tools and Their Practical Uses</h3>
+          <p>A grounded, opinionated survey of the most useful AI tools available today — what they genuinely do well, where they disappoint, and a framework for evaluating any new tool you encounter.</p>
+          <div class="meta"><span>Marcus T. Ellison</span><span>~8 min read</span></div>
+        </a>
+
+        <a href="articles/ethical-concerns-of-ai.html" class="article-tile">
+          <span class="cat">Ethics &amp; Society</span>
+          <h3>Ethical Concerns of AI: What We Need to Talk About</h3>
+          <p>Bias, surveillance, power concentration, misinformation, labor displacement — the ethical questions around AI that are already real, already important, and nowhere near resolved.</p>
+          <div class="meta"><span>Marcus T. Ellison</span><span>~10 min read</span></div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <footer><div class="footer-inner"><div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo" style="color:white;">Grok<span style="color:var(--accent)">expedia</span></a><p>An independent knowledge platform covering AI and technology.</p></div>
+    <div class="footer-col"><h5>Articles</h5><ul><li><a href="articles/what-is-grokipedia.html">What is Grokipedia</a></li><li><a href="articles/ai-introduction.html">AI for Beginners</a></li><li><a href="articles/ethical-concerns-of-ai.html">AI Ethics</a></li><li><a href="articles.html">View All →</a></li></ul></div>
+    <div class="footer-col"><h5>Site</h5><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
+    <div class="footer-col"><h5>Categories</h5><ul><li><a href="categories/artificial-intelligence.html">Artificial Intelligence</a></li><li><a href="categories/technology.html">Technology</a></li><li><a href="categories/guides.html">Guides</a></li><li><a href="categories/ethics.html">Ethics</a></li></ul></div>
+  </div><div class="footer-bottom"><span>© 2026 Grokexpedia</span><span><a href="privacy.html">Privacy</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="terms.html">Terms</a></span></div></div></footer>
+</body>
+</html>
