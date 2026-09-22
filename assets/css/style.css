@@ -464,7 +464,6 @@ html:not([data-theme=light]) .theme-toggle {
   position: relative;
   display: grid;
   align-items: end;
-  min-height: calc(100svh - 76px);
   overflow: hidden;
   border-bottom: 1px solid var(--line);
 }
