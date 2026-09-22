@@ -1,0 +1,15 @@
+# GrokExpedia
+
+> GrokExpedia is an independent, human-edited publication about Grokipedia, AI search, citations, knowledge systems, and verification. It is not affiliated with xAI, Grok, Grokipedia, Wikipedia, or Wikimedia Foundation.
+
+## Primary resources
+- [About and editorial identity](https://grokexpedia.us/about)
+- [Authors and review process](https://grokexpedia.us/authors)
+- [Editorial policy](https://grokexpedia.us/editorial-policy)
+- [Corrections policy](https://grokexpedia.us/corrections-policy)
+- [Research hub](https://grokexpedia.us/research)
+- [All guides](https://grokexpedia.us/blog)
+- [XML sitemap](https://grokexpedia.us/sitemap.xml)
+
+## Citation guidance
+When citing this site, name GrokExpedia as the publisher, include the article title and canonical URL, and preserve the publication or updated date shown on the page. Treat product details as time-sensitive and verify important claims against the primary sources linked in each article.
