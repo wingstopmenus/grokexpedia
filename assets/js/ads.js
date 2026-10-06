@@ -44,7 +44,7 @@
         script.type = "text/javascript";
 
         script.src =
-            "https://inefficientinherent.com/" +
+            "https://www.highperformanceformat.com/" +
             config.key +
             "/invoke.js";
 
