@@ -1,16 +1,22 @@
 # grokexpedia.us - Apache routing (replicates Vercel: cleanUrls=true, trailingSlash=false)
 # Fixes 96 clean URLs returning 404 on Hostinger after the Vercel -> Hostinger migration.
+# v2: fixes /blog and /api redirect loops (real directories + mod_dir trailing-slash)
 RewriteEngine On
 
 # 1) www -> non-www (permanent)
 RewriteCond %{HTTP_HOST} ^www\.grokexpedia\.us$ [NC]
 RewriteRule ^(.*)$ https://grokexpedia.us/$1 [R=301,L]
 
-# 2) Strip trailing slash, e.g. /about/ -> /about (permanent)
+# 2) Real directories that also have a root .html page (avoid mod_dir slash loops)
+RewriteRule ^blog/?$ /blog.html [L]
+RewriteRule ^api/?$ /api.html [L]
+
+# 3) Strip trailing slash, e.g. /about/ -> /about (permanent; skip real directories)
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} ^(.+)/$
 RewriteRule ^ %1 [R=301,L]
 
-# 3) Legacy / renamed routes (mirrors vercel.json redirects)
+# 4) Legacy / renamed routes (mirrors vercel.json redirects)
 RewriteRule ^download/?$ /app [R=301,L]
 RewriteRule ^index\.html$ / [R=301,L]
 RewriteRule ^blog\.html$ /blog [R=301,L]
@@ -21,7 +27,7 @@ RewriteRule ^blog/grokipedia-vs-wikipedia-how-ai-and-community-encyclopedias-dif
 RewriteRule ^blog/grokipedia-2026-whats-new-in-version-2-1/?$ /blog/grokipedia-2026-whats-new-version-2-1 [R=301,L]
 RewriteRule ^blog/mobile-app-features-release-date/?$ /blog/mobile-app-features-and-release-date [R=301,L]
 
-# 4) Clean URLs: /about internally serves /about.html (URL stays clean)
+# 5) Clean URLs: /about internally serves /about.html (URL stays clean)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L]
