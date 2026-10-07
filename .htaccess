@@ -26,6 +26,7 @@ RewriteRule ^articles/(.*)$ /blog/$1 [R=301,L]
 RewriteRule ^blog/grokipedia-vs-wikipedia-how-ai-and-community-encyclopedias-differ/?$ /blog/grokipedia-vs-wikipedia [R=301,L]
 RewriteRule ^blog/grokipedia-2026-whats-new-in-version-2-1/?$ /blog/grokipedia-2026-whats-new-version-2-1 [R=301,L]
 RewriteRule ^blog/mobile-app-features-release-date/?$ /blog/mobile-app-features-and-release-date [R=301,L]
+RewriteRule ^blog/mobile-app-features-and-release-date/?$ /app [R=301,L]
 
 # 5) Clean URLs: /about internally serves /about.html (URL stays clean)
 RewriteCond %{REQUEST_FILENAME} !-f
